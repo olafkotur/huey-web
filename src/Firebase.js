@@ -13,6 +13,8 @@ export const initialize = () => {
 	firebase.initializeApp(config);
 }
 
+
+// Authenticates user
 export const signIn = async (email, password) => {
 	await firebase
 	.auth()
@@ -21,6 +23,7 @@ export const signIn = async (email, password) => {
 	.catch((error) => console.log(error.message));
 }
 
+// Checks whether user has admin access
 export const checkAdmin = async (email) => {
 	const ref = firebase.database().ref('admin/access/');
 	let result = false;
@@ -30,5 +33,15 @@ export const checkAdmin = async (email) => {
 	});
 
 	return result;
+}
 
+
+// Uploads new event data to database
+export const uploadEvent = async (event) => {
+	const uid = firebase.auth().currentUser.uid;
+	const ref = firebase.database().ref('admin/users/' + uid + '/');
+	
+	await ref.push({event})
+	.then(console.log('Uploaded to Database'))
+	.catch(error => console.log(error));
 }
