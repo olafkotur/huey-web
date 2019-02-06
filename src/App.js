@@ -1,6 +1,7 @@
 import React from "react";
 import { createNavigator, SwitchRouter, SceneView } from "@react-navigation/core";
 import { createBrowserApp, Link } from "@react-navigation/web";
+import './Stylesheet.css'
 
 import Admin from './views/Admin';
 import Login from './views/Login';
@@ -11,13 +12,16 @@ class SidebarView extends React.Component {
         const activeKey = navigation.state.routes[navigation.state.index].key;
         const descriptor = descriptors[activeKey];
         return (
-            <div style={{ display: "flex", height: "100%", justifyContent: "stretch" }}>
-                <div style={{width: 300, backgroundColor: "#efefef", borderRight: "1px solid #99b"}}>
-                    <h1>Navigation</h1>
-                    <Link routeName="Login">Login</Link>
-                    <Link routeName="Admin">Admin</Link>
+            <div class = 'mainContainer'>
+                <div class = 'almostWhiteBackground'>
+                    <img src="https://thehueyproject.files.wordpress.com/2019/02/cropped-logo-2.png?w=740&h=740" alt="Huey Logo" class = 'logoImage'></img>
+                    <Link routeName="Admin"><a class = 'menuButton'>Protest Setup</a></Link>
+                    <Link routeName="Admin"><a class = 'menuButton'>Generate QR Codes</a></Link>
+                    <a class = 'menuButtonDisabled'>View Shared Media</a>
+                    <a class = 'menuButtonDisabled'>Account Settings</a>
+                    <Link routeName="Login"><a class = 'menuButtonLogin'>Login</a></Link>
                 </div>
-                <div>
+                <div class = 'mainContainer'>
                     <SceneView component={descriptor.getComponent()} navigation={descriptor.navigation}/>
                 </div>
             </div>
