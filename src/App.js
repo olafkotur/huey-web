@@ -48,8 +48,9 @@ class SidebarView extends React.Component {
                         <Login/>
                     </div>
                 </div>
-                <div class='mainContainer'>
-                    {this.mainView()}
+
+                <div class='sceneBackground'>
+                    <SceneView component={descriptor.getComponent()} navigation={descriptor.navigation}/>
                 </div>
             </div>
         );

@@ -68,7 +68,7 @@ h1 {
 
 .almostWhiteBackground {
 	background-color: var(--ivory);
-	width: 17.5em;
+	width: 17.5vw;
 	border-width: 0px;
 	border-right: 1px;
 	border-style: solid;
@@ -79,6 +79,20 @@ h1 {
 	align-content: center;
 	align-items: center;
 	margin: auto;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+}
+
+.sceneBackground {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	margin-left: 17.5vw;
+	justify-content: flex-start;
+	background-color: var(--almostwhite);
 }
 
 .mainContainer {
@@ -103,7 +117,9 @@ h1 {
 	padding: 10px 0px;
 	text-align: center;
 	font-size: 16px;
-	font-family: Source Sans Pro;
+	font-family: Lato;
+	font-weight: bold;
+	text-transform: uppercase;
 	cursor: pointer;
 	width: 100%;
 	margin-top: 0em;
@@ -121,7 +137,9 @@ h1 {
 	padding: 10px 0px;
 	text-align: center;
 	font-size: 16px;
-	font-family: Source Sans Pro;
+	font-family: Lato;
+	font-weight: bold;
+	text-transform: uppercase;
 	cursor: pointer;
 	width: 100%;
 	margin-top: 0em;
@@ -133,21 +151,9 @@ h1 {
 }
 
 .menuButton:hover {
-	display: inline-block;
-	border: none;
 	color: white;
-	padding: 10px 0px;
-	text-align: center;
-	font-size: 16px;
-	font-family: Source Sans Pro;
-	cursor: pointer;
-	width: 100%;
-	margin-top: 0em;
-	border: 0;
-	box-shadow: none;
-	border-radius: 0px;
 	background-color: var(--hueygreen);
-	border-width: 0;
+
 }
 
 .menuButtonLogin {
@@ -156,7 +162,8 @@ h1 {
 	padding: 10px 0px;
 	text-align: center;
 	font-size: 14px;
-	font-family: Source Sans Pro;
+	font-weight: bold;
+	text-transform: uppercase;
 	cursor: pointer;
 	border: 0;
 	box-shadow: none;
@@ -202,7 +209,9 @@ h1 {
 	padding: 10px 0px;
 	text-align: center;
 	font-size: 14px;
-	font-family: Source Sans Pro;
+	font-family: Lato;
+	font-weight: bold;
+	text-transform: uppercase;
 	cursor: pointer;
 	border: 0;
 	box-shadow: none;
@@ -213,6 +222,7 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1vh;
+	user-select: none;
 }
 
 .menuButtonLogout:hover {
@@ -223,11 +233,19 @@ h1 {
 	font-family: Source Sans Pro;
 	font-size: 0.8em;
 	padding: 10px 10px;
+	user-select: none;
 }
 
 .emailAddressText{
 	font-family: Source Sans Pro;
 	font-weight: 700;
+	user-select: none;
+}
+
+.qr-code{
+	height: 10vh;
+	width: 10vh;
+	align-self: flex-end;
 }
 
 
