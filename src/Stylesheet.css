@@ -12,6 +12,7 @@
 	--almostblack: 		#2f3640;
 	--flatblue:			#0097e6;
 	--flatred:			#e84118;
+	--darkflatred:		#CE3A15;
 	--flatyellow:		#fbc531;
 	--blacktext:		#22292f;
 	--darkgrey:			#4b4b4b;
@@ -149,23 +150,7 @@ h1 {
 }
 
 .menuButtonLogin:hover {
-	display: inline-block;
-	color: white;
-	padding: 10px 0px;
-	text-align: center;
-	font-size: 14px;
-	font-family: Source Sans Pro;
-	cursor: pointer;
-	width: 100%;
-	margin-top: 0em;
-	border: 0;
-	box-shadow: none;
-	border-radius: 0px;
 	background-color: var(--lighthueygreen);
-	border-width: 0;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .loginButtonDiv {
@@ -182,6 +167,48 @@ h1 {
 	font-family: Source Sans Pro;
 }
 
+
+.logoutTextFields {
+	width: 0px;
+	border: none;
+}
+
 .loginDiv {
 	margin-top: 10vh;
 }
+
+.menuButtonLogout{
+	display: inline-block;
+	color: white;
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 14px;
+	font-family: Source Sans Pro;
+	cursor: pointer;
+	border: 0;
+	box-shadow: none;
+	border-radius: 0px;
+	background-color: var(--flatred);
+	border-width: 0;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1vh;
+}
+
+.menuButtonLogout:hover {
+	background-color: var(--darkflatred);
+}
+
+.emailText{
+	font-family: Source Sans Pro;
+	font-size: 0.8em;
+	padding: 10px 10px;
+}
+
+.emailAddressText{
+	font-family: Source Sans Pro;
+	font-weight: 700;
+}
+
+
