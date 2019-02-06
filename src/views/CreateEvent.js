@@ -1,6 +1,6 @@
 import React from "react";
 
-class Admin extends React.Component {
+class CreateEvent extends React.Component {
 	render() {
 		return (
 			<div>
@@ -10,4 +10,4 @@ class Admin extends React.Component {
 	}
 }
 
-export default Admin;
+export default CreateEvent;
