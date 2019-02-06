@@ -9,16 +9,33 @@ import Home from './views/Home';
 import CreateEvent from './views/CreateEvent';
 import Events from './views/Events';
 
+
 class SidebarView extends React.Component {
 
     componentWillMount = async () => {
         await initialize();
     }
 
-    render() {
+    // Right hand side section of the web app
+    mainView = () => {
         const { descriptors, navigation } = this.props;
         const activeKey = navigation.state.routes[navigation.state.index].key;
         const descriptor = descriptors[activeKey];
+        const logged = localStorage.getItem('loggedIn').includes('true');
+
+        if (logged) {
+            return (
+                <SceneView component={descriptor.getComponent()} navigation={descriptor.navigation}/>
+            );
+        }
+        else {
+            return (
+                <h1>You must log in with an Admin account to continue</h1>
+            );
+        }
+    }
+
+    render() {
         return (
             <div class='mainContainer'>
                 <div class='almostWhiteBackground'>
@@ -31,6 +48,7 @@ class SidebarView extends React.Component {
                         <Login/>
                     </div>
                 </div>
+
                 <div class='sceneBackground'>
                     <SceneView component={descriptor.getComponent()} navigation={descriptor.navigation}/>
                 </div>
