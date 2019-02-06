@@ -29,7 +29,7 @@ class SidebarView extends React.Component {
                         <Login/>
                     </div>
                     <div class='loginButtonDiv'>
-                        <Link routeName="Login"><a class='menuButtonLogin'>Login</a></Link>
+                        <Link routeName="Login"><span class='menuButtonLogin'>Login</span></Link>
                     </div>
                 </div>
                 <div class='mainContainer'>
