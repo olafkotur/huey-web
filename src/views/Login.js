@@ -14,7 +14,6 @@ class Login extends React.Component {
 			Firebase.checkAdmin(this.state.email).then((result) => {
 				if (result === true) {
 					Firebase.signIn(this.state.email, this.state.password);
-					alert('Logged in as: ' + this.state.email);
 				}
 				else {
 					alert('This user does not have admin access.');

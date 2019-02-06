@@ -26,6 +26,25 @@ vw = width of window
 
 ------------------------------------------------*/
 
+
+/*CHANGE ME*/
+.event-container {
+	display: flex;
+}
+
+.row-left {
+	float: left;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.row-right {
+	float: right;
+	width: 50%;
+}
+
+
+
 h1 {
 	color: var(--blacktext);
 	font-family: Source Sans Pro;

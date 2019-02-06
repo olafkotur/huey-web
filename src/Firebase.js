@@ -19,7 +19,7 @@ export const signIn = async (email, password) => {
 	await firebase
 	.auth()
 	.signInWithEmailAndPassword(email, password)
-	.then(() => console.log('woop woop'))
+	.then(() => console.log('Logged in as: ' + email))
 	.catch((error) => console.log(error.message));
 }
 
@@ -30,7 +30,7 @@ export const checkAdmin = async (email) => {
 
 	await ref.once('value', snapshot => {
 		if (snapshot.val().includes(email)) result = true;
-	});
+	}).catch(error => console.log(error));
 
 	return result;
 }
@@ -41,7 +41,35 @@ export const uploadEvent = async (event) => {
 	const uid = firebase.auth().currentUser.uid;
 	const ref = firebase.database().ref('admin/users/' + uid + '/');
 	
-	await ref.push({event})
+	await ref.push({
+		name: event.name,
+		organisers: event.organisers,
+		protestors: event.protestors
+	})
 	.then(console.log('Uploaded to Database'))
 	.catch(error => console.log(error));
 }
+
+
+// Fetches events data
+export const fetchEventData = async () => {
+	const uid = firebase.auth().currentUser.uid;
+	const ref = firebase.database().ref('admin/users/' + uid + '/');
+	let result = { data: [], error: null };
+
+	await ref.once('value', snapshot => {
+		result.data = snapshot.val();
+	}).catch(error => { console.log(error); result.data = error });
+
+	return result;
+}
+
+
+
+
+
+
+
+
+
+
