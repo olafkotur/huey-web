@@ -68,7 +68,7 @@ h1 {
 
 .almostWhiteBackground {
 	background-color: var(--ivory);
-	width: 17.5em;
+	width: 17.5vw;
 	border-width: 0px;
 	border-right: 1px;
 	border-style: solid;
@@ -79,6 +79,20 @@ h1 {
 	align-content: center;
 	align-items: center;
 	margin: auto;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+}
+
+.sceneBackground {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	margin-left: 17.5vw;
+	justify-content: flex-start;
+	background-color: var(--almostwhite);
 }
 
 .mainContainer {
