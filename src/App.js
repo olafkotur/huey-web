@@ -4,8 +4,9 @@ import { createBrowserApp, Link } from "@react-navigation/web";
 import './Stylesheet.css'
 
 import { initialize } from './Firebase';
-import CreateEvent from './views/CreateEvent';
 import Login from './views/Login';
+import Home from './views/Home';
+import CreateEvent from './views/CreateEvent';
 
 class SidebarView extends React.Component {
 
@@ -43,6 +44,7 @@ class SidebarView extends React.Component {
 const AppNavigator = createNavigator(
     SidebarView,
     SwitchRouter({
+        home: Home,
         create: CreateEvent,
     }), {}
 );
