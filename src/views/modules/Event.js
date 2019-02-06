@@ -10,7 +10,7 @@ export default class Event extends React.Component {
 					<p>Protestors: {this.props.protestors}</p>
 				</div>
 				<div class="row-right">
-					<h1>IMAGE</h1>
+					<img class='qr-code' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1024px-QR_code_for_mobile_English_Wikipedia.svg.png'></img>
 				</div>
 			</div>
 		);
