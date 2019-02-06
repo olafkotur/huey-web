@@ -11,8 +11,8 @@ import Events from './views/Events';
 
 class SidebarView extends React.Component {
 
-    componentDidMount = () => {
-        initialize();
+    componentWillMount = async () => {
+        await initialize();
     }
 
     render() {
