@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400, 500, 600, 700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+:root {
+    --hueygreen:		#27ae60;
+    --darkhueygreen:	#3f9563;
+    --almostwhite:		#F6F6F6;
+    --ivory:			#f1f2f6;
+	--almostblack: 		#2f3640;
+	--flatblue:			#0097e6;
+	--flatred:			#e84118;
+	--flatyellow:		#fbc531;
+	--blacktext:		#22292f;
+	--darkgrey:			#4b4b4b;
+}
+
+/*--------REMEMBER-------------------------------
+
+em = default font size of current window
+vh = height of window
+vw = width of window
+% = size of parent
+
+------------------------------------------------*/
+
+h1 {
+	color: var(--blacktext);
+	font-family: Source Sans Pro;
+}
+
+.h1Menu {
+	color: #2f3542;
+	font-family: Source Sans Pro;
+	font-weight: bold;
+	margin-left: -4em;
+	font-size: 1.5em;
+
+}
+
+.hueyGreenBackground {
+	background-color: var(--hueygreen);
+	width: 20em;
+	border-right: 1px;
+}
+
+.almostWhiteBackground {
+	background-color: var(--ivory);
+	width: 17.5em;
+	border-width: 0px;
+	border-right: 1px;
+	border-style: solid;
+	border-color: lightgrey;
+	height: 100vh;
+	text-align: center;
+}
+
+.mainContainer {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	justify-content: flex-start;
+	background-color: var(--almostwhite);
+}
+
+.logoImage {
+	height: 15em;
+	margin-top: 1em;
+	margin-left: -1em;
+	margin-bottom: 3vh;
+}
+
+.menuButton {
+	display: inline-block;
+	border: none;
+	color: var(--blacktext);
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 16px;
+	font-family: Source Sans Pro;
+	cursor: pointer;
+	width: 100%;
+	margin-top: 0em;
+	border: 0;
+	box-shadow: none;
+	border-radius: 0px;
+	background-color: var(--ivory);
+	border-width: 0;
+}
+
+.menuButtonDisabled {
+	display: inline-block;
+	border: none;
+	color: grey;
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 16px;
+	font-family: Source Sans Pro;
+	cursor: pointer;
+	width: 100%;
+	margin-top: 0em;
+	border: 0;
+	box-shadow: none;
+	border-radius: 0px;
+	background-color: lightgrey; 
+	border-width: 0;
+}
+
+.menuButton:hover {
+	display: inline-block;
+	border: none;
+	color: white;
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 16px;
+	font-family: Source Sans Pro;
+	cursor: pointer;
+	width: 100%;
+	margin-top: 0em;
+	border: 0;
+	box-shadow: none;
+	border-radius: 0px;
+	background-color: var(--hueygreen);
+	border-width: 0;
+}
+
+.menuButtonLogin {
+	display: inline-block;
+	border: none;
+	color: white;
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 16px;
+	font-family: Source Sans Pro;
+	cursor: pointer;
+	width: 100%;
+	margin-top: 0em;
+	border: 0;
+	box-shadow: none;
+	border-radius: 0px;
+	background-color: var(--hueygreen);
+	border-width: 0;
+	margin-top: 49.8vh;
+}
+
+.menuButtonLogin:hover {
+	display: inline-block;
+	border: none;
+	color: white;
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 16px;
+	font-family: Source Sans Pro;
+	cursor: pointer;
+	width: 100%;
+	margin-top: 0em;
+	border: 0;
+	box-shadow: none;
+	border-radius: 0px;
+	background-color: var(--darkhueygreen);
+	border-width: 0;
+	margin-top: 49.8vh;
+}
