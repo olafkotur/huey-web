@@ -24,6 +24,7 @@ class CreateEvent extends React.Component {
 	render() {
 		return (
 			<div>
+				<title>Huey Admin</title>
 				<h1>Create Event</h1>
 
 				<label>Event Name:</label>

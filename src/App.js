@@ -22,7 +22,7 @@ class SidebarView extends React.Component {
         return (
             <div class='mainContainer'>
                 <div class='almostWhiteBackground'>
-                    <img src="https://thehueyproject.files.wordpress.com/2019/02/cropped-logo-2.png?w=740&h=740" alt="Huey Logo" class = 'logoImage'></img>
+                    <a href="/home"><img src="https://thehueyproject.files.wordpress.com/2019/02/cropped-logo-2.png?w=740&h=740" alt="Huey Logo" class = 'logoImage'></img></a>
                     <Link routeName="events"><span class="menuButton">My Events</span></Link>
                     <Link routeName="create"><span class="menuButton">Create Event</span></Link>
                     <span class='menuButtonDisabled'>View Shared Media</span>
@@ -41,6 +41,18 @@ class SidebarView extends React.Component {
         );
     }
 }
+
+Home.navigationOptions = {
+    title: "Home"
+};
+
+CreateEvent.navigationOptions = {
+    title: "Create Event"
+};
+
+Events.navigationOptions = {
+    title: "Events"
+};
 
 const AppNavigator = createNavigator(
     SidebarView,
