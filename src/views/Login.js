@@ -26,15 +26,11 @@ class Login extends React.Component {
 	render() {
 		return (
 			<div>
-				<label htmlFor='email'>Email:<br/>
-					<input id="email" type="text" placeholder="Email" onChange={(email) => this.setState({email: email.target.value})}/>
-				</label>
+				
+				<input id="email" type="text" placeholder="Email" onChange={(email) => this.setState({email: email.target.value})}/>
 
-				<br/><br/>
-
-				<label htmlFor='password'>Password:<br/>
-					<input id="password" type="text" placeholder="Password" onChange={(password) => this.setState({password: password.target.value})}/>
-				</label>
+				
+				<input id="password" type="text" placeholder="Password" onChange={(password) => this.setState({password: password.target.value})}/>
 
 				<br/><br/>
 

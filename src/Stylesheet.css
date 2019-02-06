@@ -135,14 +135,14 @@ h1 {
 	font-size: 16px;
 	font-family: Source Sans Pro;
 	cursor: pointer;
-	width: 100%;
-	margin-top: 0em;
 	border: 0;
 	box-shadow: none;
 	border-radius: 0px;
 	background-color: var(--hueygreen);
 	border-width: 0;
-	margin-top: 49.8vh;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 .menuButtonLogin:hover {
@@ -162,4 +162,16 @@ h1 {
 	background-color: var(--darkhueygreen);
 	border-width: 0;
 	margin-top: 49.8vh;
+}
+
+.loginButtonDiv {
+
+}
+
+.loginTextFields {
+
+}
+
+.loginDiv {
+	margin-top: 10vh;
 }
