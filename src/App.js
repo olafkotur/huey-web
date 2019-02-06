@@ -27,11 +27,8 @@ class SidebarView extends React.Component {
                     <Link routeName="create"><span class="menuButton">Create Event</span></Link>
                     <span class='menuButtonDisabled'>View Shared Media</span>
                     <span class='menuButtonDisabled'>Account Settings</span>
-                    <div class='loginDiv'>
-                        <Login/>
-                    </div>
                     <div class='loginButtonDiv'>
-                        <Link routeName="Login"><span class='menuButtonLogin'>Login</span></Link>
+                        <Login/>
                     </div>
                 </div>
                 <div class='mainContainer'>
