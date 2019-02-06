@@ -4,8 +4,8 @@ import * as Firebase from '../Firebase';
 class Login extends React.Component {
 
 	state = {
-		email: '',
-		password: ''
+		email: 'hueyyapp@gmail.com',
+		password: 'Testing1123'
 	}
 
 	handleSubmit = async () => {
@@ -27,10 +27,10 @@ class Login extends React.Component {
 		return (
 			<div>
 				
-				<input id="email" type="text" placeholder="Email" onChange={(email) => this.setState({email: email.target.value})}/>
+				<input id="email" type="text" placeholder="Email" value={this.state.email} onChange={(email) => this.setState({email: email.target.value})}/>
 
 				
-				<input id="password" type="text" placeholder="Password" onChange={(password) => this.setState({password: password.target.value})}/>
+				<input id="password" type="password" placeholder="Password" value={this.state.password} onChange={(password) => this.setState({password: password.target.value})}/>
 
 				<br/><br/>
 
