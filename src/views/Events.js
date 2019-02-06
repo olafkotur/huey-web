@@ -13,12 +13,20 @@ class Events extends React.Component {
 	}
 
 	displayEvents = () => {
-		let data = this.state.eventData;;
+		const keys = Object.keys(this.state.eventData);
+		const data = Object.values(this.state.eventData);
 		let result = [];
-		data = Object.values(data);
 		
-		data.forEach((event) => {
-			result.push(<Event name={event.name} organisers={event.organisers} protestors={event.protestors} />);
+		// Run through each event, create a new event component and add to an array
+		data.forEach((event, i) => {
+			result.push(
+				<Event 
+					key = {keys[i]}
+					name = {event.name}
+					organisers = {event.organisers}
+					protestors = {event.protestors}>
+				</Event>
+			);
 		});
 
 		return result;
