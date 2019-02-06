@@ -27,11 +27,9 @@ class Login extends React.Component {
 		return (
 			<div>
 				
-				<input class='loginTextFields' id="email" type="text" placeholder="Email" onChange={(email) => this.setState({email: email.target.value})}/>
+				<input class='loginTextFields' id="email" type="email" placeholder="Email" onChange={(email) => this.setState({email: email.target.value})}/>
 				
-				<input class='loginTextFields' id="password" type="text" placeholder="Password" onChange={(password) => this.setState({password: password.target.value})}/>
-
-				<br/><br/>
+				<input class='loginTextFields' id="password" type="password" placeholder="Password" onChange={(password) => this.setState({password: password.target.value})}/>
 
 				<button class='menuButtonLogin' onClick={this.handleSubmit}>Login</button>
 			</div>
