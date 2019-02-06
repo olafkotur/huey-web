@@ -5,6 +5,7 @@
   "dependencies": {
     "@react-navigation/core": "^3.0.3",
     "@react-navigation/web": "^1.0.0-alpha.7",
+    "firebase": "^5.8.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
