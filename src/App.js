@@ -4,7 +4,7 @@ import { createBrowserApp, Link } from "@react-navigation/web";
 import './Stylesheet.css'
 
 import { initialize } from './Firebase';
-import Admin from './views/Admin';
+import CreateEvent from './views/CreateEvent';
 import Login from './views/Login';
 
 class SidebarView extends React.Component {
@@ -21,10 +21,10 @@ class SidebarView extends React.Component {
             <div class='mainContainer'>
                 <div class='almostWhiteBackground'>
                     <img src="https://thehueyproject.files.wordpress.com/2019/02/cropped-logo-2.png?w=740&h=740" alt="Huey Logo" class = 'logoImage'></img>
-                    <Link routeName="Admin"><a class='menuButton'>Protest Setup</a></Link>
-                    <Link routeName="Admin"><a class='menuButton'>Generate QR Codes</a></Link>
-                    <a class='menuButtonDisabled'>View Shared Media</a>
-                    <a class='menuButtonDisabled'>Account Settings</a>
+                    <Link routeName="Admin"><span class="menuButton">Protest Setup</span></Link>
+                    <Link routeName="Admin"><span class="menuButton">Generate QR Codes</span></Link>
+                    <span class='menuButtonDisabled'>View Shared Media</span>
+                    <span class='menuButtonDisabled'>Account Settings</span>
                     <div class='loginDiv'>
                         <Login/>
                     </div>
@@ -43,7 +43,7 @@ class SidebarView extends React.Component {
 const AppNavigator = createNavigator(
     SidebarView,
     SwitchRouter({
-        Admin,
+        create: CreateEvent,
     }), {}
 );
 
