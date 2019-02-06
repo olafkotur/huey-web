@@ -24,6 +24,7 @@ class Login extends React.Component {
 				else if (this.state.loginText === 'Log Out') {
 					localStorage.setItem('loggedIn', false);
 					this.setState({loginText: 'Login', loginStyle: 'menuButtonLogin', loginFieldStyle: 'loginTextFields', emailHidden: true})
+					window.location.reload();
 				}
 				else {
 					alert('This user does not have admin access.');
