@@ -2,6 +2,7 @@ import * as firebase from 'firebase';
 
 // Initialize Firebase
 export const initialize = () => {
+	localStorage.setItem('loggedIn', false);
 	const config = {
 		apiKey: "AIzaSyA23wbAZnIDclHiMqF045vKWXXa1LdU-G0",
 	    authDomain: "huey-f5674.firebaseapp.com",
@@ -19,7 +20,10 @@ export const signIn = async (email, password) => {
 	await firebase
 	.auth()
 	.signInWithEmailAndPassword(email, password)
-	.then(() => console.log('Logged in as: ' + email))
+	.then(() => {
+		console.log('Logged in as: ' + email);
+		localStorage.setItem('loggedIn', true);
+	})
 	.catch((error) => console.log(error.message));
 }
 
@@ -33,6 +37,15 @@ export const checkAdmin = async (email) => {
 	}).catch(error => console.log(error));
 
 	return result;
+}
+
+
+// Checks whether an admin is logged in
+export const isLoggedIn = async () => {
+	const user = await firebase.auth().currentUser;
+	console.log(user);
+	if (user) return true;
+	else return false;
 }
 
 
@@ -63,6 +76,7 @@ export const fetchEventData = async () => {
 
 	return result;
 }
+
 
 
 
