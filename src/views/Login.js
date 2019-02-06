@@ -14,12 +14,16 @@ class Login extends React.Component {
 
 	handleSubmit = async () => {
 		if (this.state.email && this.state.password) {
-			// Firebase.signIn(this.state.email, this.state.password);
+			// Check if user is an admin
 			Firebase.checkAdmin(this.state.email).then( async(result) => {
-				if (result === true) {
+				// Log user in if admin
+				if (result === true && this.state.loginText === 'Login') {
 					await Firebase.signIn(this.state.email, this.state.password);
-					//INSERT STATECHANGE HERE
 					this.setState({loginText: 'Log Out', loginStyle: 'menuButtonLogout', loginFieldStyle: 'logoutTextFields', emailHidden: false})
+				}
+				else if (this.state.loginText === 'Log Out') {
+					localStorage.setItem('loggedIn', false);
+					this.setState({loginText: 'Login', loginStyle: 'menuButtonLogin', loginFieldStyle: 'loginTextFields', emailHidden: true})
 				}
 				else {
 					alert('This user does not have admin access.');
