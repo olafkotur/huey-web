@@ -117,7 +117,9 @@ h1 {
 	padding: 10px 0px;
 	text-align: center;
 	font-size: 16px;
-	font-family: Source Sans Pro;
+	font-family: Lato;
+	font-weight: bold;
+	text-transform: uppercase;
 	cursor: pointer;
 	width: 100%;
 	margin-top: 0em;
@@ -135,7 +137,9 @@ h1 {
 	padding: 10px 0px;
 	text-align: center;
 	font-size: 16px;
-	font-family: Source Sans Pro;
+	font-family: Lato;
+	font-weight: bold;
+	text-transform: uppercase;
 	cursor: pointer;
 	width: 100%;
 	margin-top: 0em;
@@ -147,21 +151,9 @@ h1 {
 }
 
 .menuButton:hover {
-	display: inline-block;
-	border: none;
 	color: white;
-	padding: 10px 0px;
-	text-align: center;
-	font-size: 16px;
-	font-family: Source Sans Pro;
-	cursor: pointer;
-	width: 100%;
-	margin-top: 0em;
-	border: 0;
-	box-shadow: none;
-	border-radius: 0px;
 	background-color: var(--hueygreen);
-	border-width: 0;
+
 }
 
 .menuButtonLogin {
@@ -170,7 +162,8 @@ h1 {
 	padding: 10px 0px;
 	text-align: center;
 	font-size: 14px;
-	font-family: Source Sans Pro;
+	font-weight: bold;
+	text-transform: uppercase;
 	cursor: pointer;
 	border: 0;
 	box-shadow: none;
@@ -216,7 +209,9 @@ h1 {
 	padding: 10px 0px;
 	text-align: center;
 	font-size: 14px;
-	font-family: Source Sans Pro;
+	font-family: Lato;
+	font-weight: bold;
+	text-transform: uppercase;
 	cursor: pointer;
 	border: 0;
 	box-shadow: none;
@@ -227,6 +222,7 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1vh;
+	user-select: none;
 }
 
 .menuButtonLogout:hover {
@@ -237,11 +233,13 @@ h1 {
 	font-family: Source Sans Pro;
 	font-size: 0.8em;
 	padding: 10px 10px;
+	user-select: none;
 }
 
 .emailAddressText{
 	font-family: Source Sans Pro;
 	font-weight: 700;
+	user-select: none;
 }
 
 
