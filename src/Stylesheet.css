@@ -360,11 +360,11 @@ h1 {
 
 .qr-div {
 	float: right;
-	height: 200px;
-	width: 200px;
+	height: 100%;
     box-sizing: border-box;
 	margin-right: 2.5%;
-	background-color: red;
+	margin-top: -10px;
+	background-color: transparent;
 	border-radius: 15px;
 	z-index: 1;
 	border-radius: 50%;
@@ -378,6 +378,9 @@ h1 {
 
 .event-list-container {
 	margin-top: 25vh;
+	column-count: 3;
+	break-inside: avoid-column;	
+	background-color: #fff;
 }
 
 .events-big-div {
@@ -394,14 +397,18 @@ h1 {
 	width: 100%;
 	height: 200px;
 	margin-top: 2.5vh;
+	margin-right: 10px;
+	margin-left: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   	transition: 0.3s;
   	border-radius: 15px;
   	overflow: hidden;
+  	break-inside: avoid-column;
+    display:table
 }
 
 .single-event:hover {
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
 }
 
 .card-topbar {
@@ -425,7 +432,8 @@ h1 {
 	align-self: right;
 	color: var(--darkgrey);
 	float: left;
-	margin-left: 5%;
+	margin-left: 25px;
+	margin-top: 10px;
 	z-index: 1;
 	font-size: 100%;
 	font-family: Roboto;
