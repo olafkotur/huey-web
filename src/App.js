@@ -10,6 +10,7 @@ import Login from './views/Login';
 import Home from './views/Home';
 import CreateEvent from './views/CreateEvent';
 import EventList from './views/EventList';
+import SingleEvent from './views/SingleEvent';
 
 
 class SidebarView extends React.Component {
@@ -55,7 +56,7 @@ class SidebarView extends React.Component {
                 <Favicon url="http://www.google.com/s2/favicons?domain=https://thehueyproject.wordpress.com"/>
                 <div class='almostWhiteBackground'>
                     <a href="/home"><img src="https://thehueyproject.files.wordpress.com/2019/02/cropped-logo-2.png?w=740&h=740" alt="Huey Logo" class = 'logoImage'></img></a>
-                    <Link routeName="events"><span class="menuButton">My Events</span></Link>
+                    <Link routeName="event-list"><span class="menuButton">My Events</span></Link>
                     <Link routeName="create"><span class="menuButton">Create Event</span></Link>
                     <span class='menuButtonDisabled'>View Shared Media</span>
                     <span class='menuButtonDisabled'>Account Settings</span>
@@ -84,12 +85,17 @@ EventList.navigationOptions = {
     title: "Event List"
 };
 
+SingleEvent.navigationOptions = {
+    title: "HUEY Event"
+};
+
 const AppNavigator = createNavigator(
     SidebarView,
     SwitchRouter({
         home: Home,
         create: CreateEvent,
-        "event-list": EventList
+        "event-list": EventList,
+        "single-event": SingleEvent
     }), {}
 );
 

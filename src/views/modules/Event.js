@@ -1,11 +1,15 @@
 import React from "react";
+import { Link } from "@react-navigation/web";
 
 export default class Event extends React.Component {
 
-	showDetails = () => {
+	storeDetailsLocally = async () => {
+		const data = {
+			name: this.props.data.name,
+			organisers: this.props.data.organisers
+		};
 
-
-		// window.location.href = '/single-event';
+		await localStorage.setItem('eventData', JSON.stringify(data));
 	}
 
 	render() {
@@ -15,7 +19,9 @@ export default class Event extends React.Component {
 					<h3>{this.props.name}</h3>
 					<p>Organisers: {this.props.organisers}</p>
 					<p>Protestors: {this.props.protestors}</p>
-					<button onClick={this.showDetails}>Details</button>
+					<button onClick={this.storeDetailsLocally}>
+						<Link routeName="single-event">Details</Link>
+					</button>
 				</div>
 				<div class="row-right">
 					<img class='qr-code' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1024px-QR_code_for_mobile_English_Wikipedia.svg.png' alt="QR"></img>

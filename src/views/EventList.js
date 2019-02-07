@@ -8,6 +8,10 @@ class Events extends React.Component {
 		eventData: {}
 	}
 
+	componentDidMount = async () => {
+		this.fetchData();
+	}
+
 	fetchData = () => {
 		Firebase.fetchEventData().then(result => this.setState({eventData: result.data}));
 	}
@@ -24,7 +28,8 @@ class Events extends React.Component {
 					key = {keys[i]}
 					name = {event.name}
 					organisers = {event.organisers}
-					protestors = {event.protestors}>
+					protestors = {event.protestors}
+					data = {event}>
 				</Event>
 			);
 		});
