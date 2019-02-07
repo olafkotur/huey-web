@@ -8,8 +8,8 @@ class Login extends React.Component {
 		password: 'Testing1123',
 		loginText: 'Login',
 		loginStyle: 'menuButtonLogin',
-		loginFieldStyle: 'loginTextFields',
-		emailHidden: true
+		emailHidden: true,
+		loginHidden: false
 	}
 
 	handleSubmit = async () => {
@@ -19,11 +19,11 @@ class Login extends React.Component {
 				// Log user in if admin
 				if (result === true && this.state.loginText === 'Login') {
 					await Firebase.signIn(this.state.email, this.state.password);
-					this.setState({loginText: 'Log Out', loginStyle: 'menuButtonLogout', loginFieldStyle: 'logoutTextFields', emailHidden: false})
+					this.setState({loginText: 'Log Out', loginStyle: 'menuButtonLogout', emailHidden: false, loginHidden: true})
 				}
 				else if (this.state.loginText === 'Log Out') {
 					localStorage.setItem('loggedIn', false);
-					this.setState({loginText: 'Login', loginStyle: 'menuButtonLogin', loginFieldStyle: 'loginTextFields', emailHidden: true})
+					this.setState({loginText: 'Login', loginStyle: 'menuButtonLogin', emailHidden: true, loginHidden: false})
 					window.location.reload();
 				}
 				else {
@@ -37,9 +37,9 @@ class Login extends React.Component {
 		return (
 			<div>
 				
-				<input class={this.state.loginFieldStyle} id="email" type="email" placeholder="Email" value={this.state.email} onChange={(email) => this.setState({email: email.target.value})}/>
+				<input hidden={this.state.loginHidden} class='loginTextFields' id="email" type="email" placeholder="Email" value={this.state.email} onChange={(email) => this.setState({email: email.target.value})}/>
 				
-				<input class={this.state.loginFieldStyle} id="password" type="password" value={this.state.password} placeholder="Password" onChange={(password) => this.setState({password: password.target.value})}/>
+				<input hidden={this.state.loginHidden} class='loginTextFields' id="password" type="password" value={this.state.password} placeholder="Password" onChange={(password) => this.setState({password: password.target.value})}/>
 
 				<text hidden={this.state.emailHidden} class='emailText'>Logged in as {'\n'} <text class = 'emailAddressText'>{this.state.email}</text></text> 
 
