@@ -42,8 +42,6 @@ class SidebarView extends React.Component {
                     </div>
                     <div class='spacerBottom'></div>
                     <text class='admin-login-text'>Please login with an admin account to gain access to the Huey Dashboard.</text>
-                    <hr class='bottom-rule'/>
-                    <hr class='bottom-rule-2'/>
                 </div>
             );
         }

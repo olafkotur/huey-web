@@ -34,10 +34,18 @@ class Events extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<h1>My Events</h1>
-				<button class="menuButton" onClick={this.fetchData}>SYNC</button>
-				{this.displayEvents()}
+			<div class='events-big-div'>
+				<div class="scene-header">
+					<h1 class="scene-header-text">MY EVENTS</h1>
+					<div class="header-buttons-div">
+						<button class="header-buttons" onClick={this.fetchData}>SYNC</button>
+						<button class="header-buttons" onClick={this.fetchData}>BUTTON 2</button>
+						<button class="header-buttons" onClick={this.fetchData}>BUTTON 3</button>
+					</div>
+				</div>
+				<div class="event-list-container">
+					{this.displayEvents()}
+				</div>
 			</div>
 		);
 	}
