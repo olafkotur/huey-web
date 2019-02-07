@@ -32,7 +32,7 @@ vw = width of window
 /*CHANGE ME*/
 .event-container {
 	display: flex;
-	background-color: black;
+	/*background-color: black;*/
 }
 
 .row-left {

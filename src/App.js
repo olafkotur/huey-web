@@ -9,7 +9,7 @@ import { initialize } from './Firebase';
 import Login from './views/Login';
 import Home from './views/Home';
 import CreateEvent from './views/CreateEvent';
-import Events from './views/Events';
+import EventList from './views/EventList';
 
 
 class SidebarView extends React.Component {
@@ -80,8 +80,8 @@ CreateEvent.navigationOptions = {
     title: "Create Event"
 };
 
-Events.navigationOptions = {
-    title: "Events"
+EventList.navigationOptions = {
+    title: "Event List"
 };
 
 const AppNavigator = createNavigator(
@@ -89,7 +89,7 @@ const AppNavigator = createNavigator(
     SwitchRouter({
         home: Home,
         create: CreateEvent,
-        events: Events
+        "event-list": EventList
     }), {}
 );
 
