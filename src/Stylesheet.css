@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Oswald:400, 500, 600, 700');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800');
 
 :root {
     --hueygreen:		#27ae60;
@@ -86,26 +87,12 @@ h1 {
 	height: 7.5vh;
 }
 
-.bottom-rule{
-	margin-top: 2vh;
-	width: 7.5vw;
-	height: 3.5px;
-	background-color: var(--darkgrey);
-}
-
-.bottom-rule-2{
-	margin-top: 1.25vh;
-	width: 5vw;
-	height: 3.5px;
-	background-color: var(--darkgrey);
-}
-
 .admin-login-text{
-	font-family: Source Sans Pro;
+	font-family: Roboto;
 	margin-top: 10vh;
 	font-size: 1.5em;
 	color: var(--darkgrey);
-	font-weight: bold;
+	font-weight: 300;
 }
 
 
