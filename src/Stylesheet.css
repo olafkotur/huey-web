@@ -62,6 +62,53 @@ h1 {
 
 }
 
+.loading-div{
+	height: 100vh;
+	width: 100%;
+	align-items: stretch;
+	text-align: center;
+	background-color: #fff;
+}
+
+.loading-div-inner{
+	width: 10%;
+	margin-left:45%;
+	margin-right: 45%;
+	align-self: stretch;
+	background-color: #fff;
+}
+
+.spacerTop{
+	height:70vh;
+}
+
+.spacerBottom{
+	height: 7.5vh;
+}
+
+.bottom-rule{
+	margin-top: 2vh;
+	width: 7.5vw;
+	height: 3.5px;
+	background-color: var(--darkgrey);
+}
+
+.bottom-rule-2{
+	margin-top: 1.25vh;
+	width: 5vw;
+	height: 3.5px;
+	background-color: var(--darkgrey);
+}
+
+.admin-login-text{
+	font-family: Source Sans Pro;
+	margin-top: 10vh;
+	font-size: 1.5em;
+	color: var(--darkgrey);
+	font-weight: bold;
+}
+
+
 .hueyGreenBackground {
 	background-color: var(--hueygreen);
 	width: 20em;

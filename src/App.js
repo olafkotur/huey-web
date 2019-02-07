@@ -2,6 +2,8 @@ import React from "react";
 import { createNavigator, SwitchRouter, SceneView } from "@react-navigation/core";
 import { createBrowserApp, Link } from "@react-navigation/web";
 import './Stylesheet.css'
+import Favicon from 'react-favicon';
+import ReactLoading from 'react-loading';
 
 import { initialize } from './Firebase';
 import Login from './views/Login';
@@ -11,6 +13,9 @@ import Events from './views/Events';
 
 
 class SidebarView extends React.Component {
+
+
+
 
     componentWillMount = async () => {
         await initialize();
@@ -30,7 +35,16 @@ class SidebarView extends React.Component {
         }
         else {
             return (
-                <h1>You must log in with an Admin account to continue</h1>
+                <div class='loading-div'>
+                    <div class='loading-div-inner'>
+                        <div class='spacerTop'></div>
+                            <ReactLoading type={'bubbles'} color={'#27ae60'} width={'100%'}/>
+                    </div>
+                    <div class='spacerBottom'></div>
+                    <text class='admin-login-text'>Please login with an admin account to gain access to the Huey Dashboard.</text>
+                    <hr class='bottom-rule'/>
+                    <hr class='bottom-rule-2'/>
+                </div>
             );
         }
     }
@@ -38,6 +52,7 @@ class SidebarView extends React.Component {
     render() {
         return (
             <div class='mainContainer'>
+                <Favicon url="http://www.google.com/s2/favicons?domain=https://thehueyproject.wordpress.com"/>
                 <div class='almostWhiteBackground'>
                     <a href="/home"><img src="https://thehueyproject.files.wordpress.com/2019/02/cropped-logo-2.png?w=740&h=740" alt="Huey Logo" class = 'logoImage'></img></a>
                     <Link routeName="events"><span class="menuButton">My Events</span></Link>
