@@ -120,10 +120,13 @@ h1 {
 
 .sceneBackground {
 	display: flex;
-	height: 100vh;
+	height: 100%;
+	min-height: 100vh;
 	width: 100%;
 	margin-left: 275px;
-	background-color: #fff;
+	background: var(--ivory); 
+	background: -webkit-linear-gradient(to bottom, var(--almostwhite), var(--ivory)); 
+	background: linear-gradient(to bottom, var(--almostwhite), var(--ivory));
 }
 
 .scene-header {
@@ -349,30 +352,27 @@ h1 {
 }
 
 .qr-code{
-	height: 70%;
-	background-color: white;
-	margin-top: 10%;
-	margin-bottom: 10%;
-	margin-left: 15%;
-	margin-right: 15%;
+	height: 100%;
+	background-color: transparent;
 	border-radius: 25%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .qr-div {
-	float: right;
-	height: 100%;
-    box-sizing: border-box;
-	margin-right: 5%;
-	margin-top: -10px;
+	height: 22.5vw;
 	background-color: transparent;
-	border-radius: 15px;
-	z-index: 1;
-	border-radius: 50%;
+	overflow: hidden;
+	border-width: 0px;
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: lightgrey;
+	text-align: center;
 }
 
 .event-container {
 	display: flex;
-	background-color: #fff;
+	background-color: transparent;
 	width: 100%;
 	-webkit-column-break-inside: avoid; 
   	page-break-inside: avoid; 
@@ -383,14 +383,13 @@ h1 {
 	margin-top: 225px;
 	column-count: 3;
 	overflow: hidden;
-	background-color: #fff;
-	height: 100%;
+	background-color: transparent;
 }
 
 .events-big-div {
 	 width: 90%;
 	 height: 100%;
-	 background-color: #fff;
+	 background-color: transparent;
 	 margin-right: auto;
 	 margin-left: auto;
 }
@@ -399,7 +398,7 @@ h1 {
 	background-color: var(--almostwhite);
 	color: black;
 	width: 100%;
-	height: 200px;
+	height: 70vh;
 	margin-top: 10px;
 	margin-right: 10px;
 	margin-left: 10px;
@@ -411,6 +410,8 @@ h1 {
 	-webkit-column-break-inside: avoid; 
   	page-break-inside: avoid; 
   	break-inside: avoid;
+  	align-content: center;
+  	align-items: center;
 }
 
 .single-event:hover {
@@ -421,7 +422,7 @@ h1 {
 	background-color: var(--hueygreen);
 	width: 100%;
 	overflow: hidden;
-	height: 25%;
+	height: 7.5%;
 }
 
 .card-title {
