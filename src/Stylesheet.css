@@ -349,25 +349,20 @@ h1 {
 }
 
 .qr-code{
-	height: 70%;
-	background-color: white;
-	margin-top: 10%;
-	margin-bottom: 10%;
-	margin-left: 15%;
-	margin-right: 15%;
-	border-radius: 25%;
+	height: 100%;
+	background-color: transparent;
 }
 
 .qr-div {
-	float: right;
-	height: 100%;
-    box-sizing: border-box;
-	margin-right: 5%;
-	margin-top: -10px;
+	height: 25vw;
 	background-color: transparent;
-	border-radius: 15px;
-	z-index: 1;
-	border-radius: 50%;
+	overflow: hidden;
+	margin-left: -0.75vw;
+	margin-top: -2vh;
+	border-width: 0px;
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: lightgrey;
 }
 
 .event-container {
@@ -384,7 +379,6 @@ h1 {
 	column-count: 3;
 	overflow: hidden;
 	background-color: #fff;
-	height: 100%;
 }
 
 .events-big-div {
@@ -399,7 +393,7 @@ h1 {
 	background-color: var(--almostwhite);
 	color: black;
 	width: 100%;
-	height: 200px;
+	height: 70vh;
 	margin-top: 10px;
 	margin-right: 10px;
 	margin-left: 10px;
@@ -411,6 +405,8 @@ h1 {
 	-webkit-column-break-inside: avoid; 
   	page-break-inside: avoid; 
   	break-inside: avoid;
+  	align-content: center;
+  	align-items: center;
 }
 
 .single-event:hover {
@@ -421,7 +417,7 @@ h1 {
 	background-color: var(--hueygreen);
 	width: 100%;
 	overflow: hidden;
-	height: 25%;
+	height: 7.5%;
 }
 
 .card-title {
