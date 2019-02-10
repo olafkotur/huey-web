@@ -351,18 +351,20 @@ h1 {
 .qr-code{
 	height: 100%;
 	background-color: transparent;
+	border-radius: 25%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .qr-div {
-	height: 25vw;
+	height: 22.5vw;
 	background-color: transparent;
 	overflow: hidden;
-	margin-left: -0.75vw;
-	margin-top: -2vh;
 	border-width: 0px;
 	border-bottom: 1px;
 	border-style: solid;
 	border-color: lightgrey;
+	text-align: center;
 }
 
 .event-container {
