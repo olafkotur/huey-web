@@ -456,4 +456,15 @@ h1 {
 	font-family: Roboto;
 }
 
+.events-header-text {
+	font-family: Oswald;
+	font-weight: 700;
+	color: var(--blacktext);
+	margin-top: 5vh;
+}
+
+.create-event-form {
+	margin-left: 4vw;
+}
+
 
