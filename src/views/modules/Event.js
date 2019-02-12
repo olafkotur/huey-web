@@ -14,6 +14,7 @@ export default class Event extends React.Component {
 					<div class="event-text-container">
 						<p>Organisers: {this.props.organisers}</p>
 						<p>Protestors: {this.props.protestors}</p>
+						<p>Protest Info: {this.props.protestInfo}</p>
 					</div>
 				</div>
 			</div>

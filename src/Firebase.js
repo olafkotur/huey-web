@@ -57,7 +57,8 @@ export const uploadEvent = async (event) => {
 	await ref.push({
 		name: event.name,
 		organisers: event.organisers,
-		protestors: event.protestors
+		protestors: event.protestors,
+		protestInfo: event.protestInfo
 	})
 	.then(console.log('Uploaded to Database'))
 	.catch(error => console.log(error));

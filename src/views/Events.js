@@ -24,7 +24,8 @@ class Events extends React.Component {
 					key = {keys[i]}
 					name = {event.name}
 					organisers = {event.organisers}
-					protestors = {event.protestors}>
+					protestors = {event.protestors}
+					protestInfo = {event.protestInfo}>
 				</Event>
 			);
 		});
