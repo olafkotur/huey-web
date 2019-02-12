@@ -1,10 +1,24 @@
 import React from "react";
 
 export default class Event extends React.Component {
+
+	state = {
+		eventCardStyle: 'single-event'
+	}
+
+	switchCardStyles = () => {
+		if (this.state.eventCardStyle === 'single-event') {
+			this.setState({eventCardStyle: 'single-event-active'})
+			console.log("meme");
+		} else {
+			this.setState({eventCardStyle:'single-event'})
+			console.log("meme");
+		}
+	}
+
 	render() {
 		return (
-			<div class="event-container">
-				<div class="single-event">
+				<div class={this.state.eventCardStyle} onClick={this.switchCardStyles}>
 					<div class="card-topbar">
 						<h3 class="card-title">{this.props.name}</h3>
 					</div>
@@ -17,7 +31,6 @@ export default class Event extends React.Component {
 						<p>Protest Info: {this.props.protestInfo}</p>
 					</div>
 				</div>
-			</div>
 		);
 	}
 }

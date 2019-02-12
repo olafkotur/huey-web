@@ -5,7 +5,7 @@ import Event from './modules/Event';
 class Events extends React.Component {
 
 	state = {
-		eventData: {}
+		eventData: {},
 	}
 
 	fetchData = () => {
@@ -44,7 +44,7 @@ class Events extends React.Component {
 						<button class="header-buttons" onClick={this.fetchData}>BUTTON 3</button>
 					</div>
 				</div>
-				<div class="event-list-container">
+				<div class="event-list-container" onClick={this.switchCardStyles}>
 					{this.displayEvents()}
 				</div>
 			</div>
