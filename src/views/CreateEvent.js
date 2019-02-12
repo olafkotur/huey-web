@@ -7,15 +7,17 @@ class CreateEvent extends React.Component {
 		name: '',
 		organisers: '',
 		protestors: '',
+		protestInfo: ''
 
 	}
 
 	handleCreateEvent = () => {
-		if (this.state.name && this.state.organisers && this.state.protestors) {
+		if (this.state.name && this.state.organisers && this.state.protestors && this.state.protestInfo) {
 			const event = {
 				name: this.state.name,
 				organisers: this.state.organisers,
-				protestors: this.state.protestors
+				protestors: this.state.protestors,
+				protestInfo: this.state.protestInfo
 			}
 			Firebase.uploadEvent(event);
 		}
@@ -34,14 +36,20 @@ class CreateEvent extends React.Component {
 				
 				<label>Number of Organisers:</label>
 				<br/>
-				<input id="organisers" type="text" onChange={(organisers) => this.setState({organisers: organisers.target.value})}/>
+				<input id="organisers" type="number" onChange={(organisers) => this.setState({organisers: organisers.target.value})}/>
 
 				<br/><br/>
 
 				<label>Number of Protestors:</label>
 				<br/>
-				<input id="protestors" type="text" onChange={(protestors) => this.setState({protestors: protestors.target.value})}/>
+				<input id="protestors" type="number" onChange={(protestors) => this.setState({protestors: protestors.target.value})}/>
 
+				<br/><br/>
+
+				<label>Protest Info</label>
+				<br/>
+				<textarea id="protestInfo" type="text" onChange={(protestInfo) => this.setState({protestInfo: protestInfo.target.value})}/>
+				
 				<br/><br/>
 
 				<button onClick={this.handleCreateEvent}>Create</button>
