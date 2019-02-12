@@ -387,6 +387,7 @@ h1 {
 	grid-column: 3;
 	overflow: hidden;
 	background-color: transparent;
+	padding: 15px;
 }
 
 .events-big-div {
