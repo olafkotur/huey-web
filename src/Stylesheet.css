@@ -421,7 +421,7 @@ h1 {
   	transition: 1s;
   	border-radius: 15px;
   	overflow: hidden;
-  	grid-column: auto / span 3;
+  	grid-column: auto / span 2;
 }
 
 .card-topbar {
