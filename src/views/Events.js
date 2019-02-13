@@ -40,8 +40,6 @@ class Events extends React.Component {
 					<h1 class="scene-header-text">MY EVENTS</h1>
 					<div class="header-buttons-div">
 						<button class="header-buttons" onClick={this.fetchData}>SYNC</button>
-						<button class="header-buttons" onClick={this.fetchData}>BUTTON 2</button>
-						<button class="header-buttons" onClick={this.fetchData}>BUTTON 3</button>
 					</div>
 				</div>
 				<div class="event-list-container" onClick={this.switchCardStyles}>

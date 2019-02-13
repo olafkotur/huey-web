@@ -2,7 +2,7 @@ import * as firebase from 'firebase';
 
 // Initialize Firebase
 export const initialize = () => {
-	localStorage.setItem('loggedIn', false);
+	localStorage.setItem('loggedIn', true);
 	const config = {
 		apiKey: "AIzaSyA23wbAZnIDclHiMqF045vKWXXa1LdU-G0",
 	    authDomain: "huey-f5674.firebaseapp.com",
