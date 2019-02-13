@@ -28,26 +28,28 @@ class CreateEvent extends React.Component {
 			<div class="events-big-div">
 				<h1 class="create-event-header-text">Create Event</h1>
 
+				<hr class="create-event-rule"/>
+
 				<div class="create-event-form">
-					<label>Event Name:</label>
+					<label class="form-labels">Event Name:</label>
 					<br/>
 					<input class="form-text-field" id="name" type="text" onChange={(name) => this.setState({name: name.target.value})}/>
 
 					<br/><br/>
 					
-					<label>Number of Organisers:</label>
+					<label class="form-labels">Number of Organisers:</label>
 					<br/>
 					<input class="form-text-field" id="organisers" type="number" onChange={(organisers) => this.setState({organisers: organisers.target.value})}/>
 
 					<br/><br/>
 
-					<label>Number of Protestors:</label>
+					<label class="form-labels">Number of Protestors:</label>
 					<br/>
 					<input class="form-text-field" id="protestors" type="number" onChange={(protestors) => this.setState({protestors: protestors.target.value})}/>
 
 					<br/><br/>
 
-					<label>Protest Info</label>
+					<label class="form-labels">Protest Info:</label>
 					<br/>
 					<textarea class="form-textarea" id="protestInfo" type="text" onChange={(protestInfo) => this.setState({protestInfo: protestInfo.target.value})}/>
 					
