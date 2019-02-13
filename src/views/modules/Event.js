@@ -26,9 +26,10 @@ export default class Event extends React.Component {
 						<img class='qr-code' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1024px-QR_code_for_mobile_English_Wikipedia.svg.png' alt="QR"></img>
 					</div>
 					<div class="event-text-container">
-						<p>Organisers: {this.props.organisers}</p>
-						<p>Protestors: {this.props.protestors}</p>
-						<p>Protest Info: {this.props.protestInfo}</p>
+						<p class="event-subtitles">Organisers: {this.props.organisers}</p>
+						<p class="event-subtitles">Protestors: {this.props.protestors}</p>
+						<p class="event-subtitles">Protest Info: </p>
+						<p class="event-info-text">{this.props.protestInfo}</p>
 					</div>
 				</div>
 		);

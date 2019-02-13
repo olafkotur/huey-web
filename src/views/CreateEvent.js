@@ -26,34 +26,34 @@ class CreateEvent extends React.Component {
 	render() {
 		return (
 			<div class="events-big-div">
-				<h1 class="scene-header-text">Create Event</h1>
+				<h1 class="create-event-header-text">Create Event</h1>
 
 				<div class="create-event-form">
 					<label>Event Name:</label>
 					<br/>
-					<input id="name" type="text" onChange={(name) => this.setState({name: name.target.value})}/>
+					<input class="form-text-field" id="name" type="text" onChange={(name) => this.setState({name: name.target.value})}/>
 
 					<br/><br/>
 					
 					<label>Number of Organisers:</label>
 					<br/>
-					<input id="organisers" type="number" onChange={(organisers) => this.setState({organisers: organisers.target.value})}/>
+					<input class="form-text-field" id="organisers" type="number" onChange={(organisers) => this.setState({organisers: organisers.target.value})}/>
 
 					<br/><br/>
 
 					<label>Number of Protestors:</label>
 					<br/>
-					<input id="protestors" type="number" onChange={(protestors) => this.setState({protestors: protestors.target.value})}/>
+					<input class="form-text-field" id="protestors" type="number" onChange={(protestors) => this.setState({protestors: protestors.target.value})}/>
 
 					<br/><br/>
 
 					<label>Protest Info</label>
 					<br/>
-					<textarea id="protestInfo" type="text" onChange={(protestInfo) => this.setState({protestInfo: protestInfo.target.value})}/>
+					<textarea class="form-textarea" id="protestInfo" type="text" onChange={(protestInfo) => this.setState({protestInfo: protestInfo.target.value})}/>
 					
 					<br/><br/>
 
-					<button class="header-buttons" onClick={this.handleCreateEvent}>Create</button>
+					<button class="form-button" onClick={this.handleCreateEvent}>Create</button>
 				</div>
 			</div>
 		);

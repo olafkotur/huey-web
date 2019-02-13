@@ -10,6 +10,7 @@ class Events extends React.Component {
 
 	fetchData = () => {
 		Firebase.fetchEventData().then(result => this.setState({eventData: result.data}));
+		console.log(this.state.eventData)
 	}
 
 	displayEvents = () => {
