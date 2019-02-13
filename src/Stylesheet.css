@@ -369,6 +369,8 @@ h1 {
 	border-color: lightgrey;
 	text-align: center;
 	float: right;
+	margin-right: 1px;
+	margin-left: auto;
 }
 
 .event-container {
@@ -436,8 +438,7 @@ h1 {
 
 .card-title {
 	color: var(--almostwhite);
-	margin-left:22.5px;
-	margin-top: 12.5px;
+	margin-left:4%;
 	font-family: Roboto;
 	font-weight: bold;
 	font-size: 15pt;
@@ -449,8 +450,8 @@ h1 {
 	align-self: right;
 	color: var(--darkgrey);
 	float: left;
-	margin-left: 25px;
-	margin-top: 10px;
+	margin-left: 4%;
+	margin-top: 2%;
 	z-index: 1;
 	font-size: 100%;
 	font-family: Roboto;
