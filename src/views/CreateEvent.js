@@ -11,7 +11,7 @@ class CreateEvent extends React.Component {
 
 	}
 
-	handleCreateEvent = () => {
+	handleCreateEvent = async () => {
 		if (this.state.name && this.state.organisers && this.state.protestors && this.state.protestInfo) {
 			const event = {
 				name: this.state.name,
@@ -19,7 +19,16 @@ class CreateEvent extends React.Component {
 				protestors: this.state.protestors,
 				protestInfo: this.state.protestInfo
 			}
-			Firebase.uploadEvent(event);
+
+			await Firebase.uploadEvent(event)
+
+			this.setState({
+				name: '',
+				organisers: '',
+				protestors: '',
+				protestInfo: ''
+			})
+
 		}
 	}
 
@@ -33,25 +42,25 @@ class CreateEvent extends React.Component {
 				<div class="create-event-form">
 					<label class="form-labels">Event Name:</label>
 					<br/>
-					<input class="form-text-field" id="name" type="text" onChange={(name) => this.setState({name: name.target.value})}/>
+					<input class="form-text-field" id="name" type="text" value={this.state.name} onChange={(name) => this.setState({name: name.target.value})}/>
 
 					<br/><br/>
 					
 					<label class="form-labels">Number of Organisers:</label>
 					<br/>
-					<input class="form-text-field" id="organisers" type="number" onChange={(organisers) => this.setState({organisers: organisers.target.value})}/>
+					<input class="form-text-field" id="organisers" type="number" value={this.state.organisers} onChange={(organisers) => this.setState({organisers: organisers.target.value})}/>
 
 					<br/><br/>
 
 					<label class="form-labels">Number of Protestors:</label>
 					<br/>
-					<input class="form-text-field" id="protestors" type="number" onChange={(protestors) => this.setState({protestors: protestors.target.value})}/>
+					<input class="form-text-field" id="protestors" type="number" value={this.state.protestors} onChange={(protestors) => this.setState({protestors: protestors.target.value})}/>
 
 					<br/><br/>
 
 					<label class="form-labels">Protest Info:</label>
 					<br/>
-					<textarea class="form-textarea" id="protestInfo" type="text" onChange={(protestInfo) => this.setState({protestInfo: protestInfo.target.value})}/>
+					<textarea class="form-textarea" id="protestInfo" type="text" value={this.state.protestInfo} onChange={(protestInfo) => this.setState({protestInfo: protestInfo.target.value})}/>
 					
 					<br/><br/>
 
