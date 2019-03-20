@@ -1,68 +1,70 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Huey Web: React
 
-## Available Scripts
+## Setup
+* Make sure to be in your desired directory, note that `yarn` must be pre-installed
+* `git clone git@github.com:olafkotur/huey-web.git`
+* `yarn add` Do this each time yarn.lock has changed, installs all relevant node_modules
+* `yarn start` Starts the local server
 
-In the project directory, you can run:
+## View App
+* Navigate to the localhost port number that is specified in terminal output once the system has started, this is usually `3000`, but may be different depending on availability
 
-### `npm start`
+## Folders and files
+* `public/` Local server settings used by expo
+* `srcs/` Consists of the view components of the web application
+* `node_modules/` Libraries installed using yarn specified in `yarn.lock`
+* `.firebaserc` Setup for firebase hosting
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## How it works
+When the web app is loaded in the first file that is read is `App.js` inside this file we have
+declared a number of other components (views) as AppRouter. When we then call the AppNavigator
+it simply takes the first component that is loaded. In this case it is the `Home`. 
 
-### `npm test`
+The first half of the class are the functions these are declared as usual, React uses
+JavaScript ES6 hence the function declartion as such: `foobar = () => {}` instead of `foobar() {}`.
+For example, we can log a user in using firebase as follows:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```javascript
+handleLogin = async () => {
+	await firebase
+	.auth()
+	.signInWithEmailAndPassword(this.state.email, this.state.password)
+	.then(() => this.props.navigation.navigate('HomeScreen'))
+	.catch(error => this.setState({errorCode: error.code}))
+	console.log(this.state.errorCode)
+}
+```
 
-### `npm run build`
+We are able to sign in using an email and password using states to grab our data. States are
+extremely useful as they allow us to hold data and trigger an update in our render at the same
+time. For example `this.state.email` we are access the 'email' state in the current class. You 
+will see states in every class, they are defined as such: 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```javascript
+state = {
+	email: 'hueyyapp@gmail.com',
+	password: 'Testing1123',
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+	errorCode: '',
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We can set a state by doing `this.setState({ password: 'helloWorld1123' })`. This will cause
+the render function to update accordingly and show the user relevant information on the screen. 
 
-### `npm run eject`
+The `render()` function plays an important part in React as it allows us to generate content using HTML. Using a singular `<div>` element in this function allows us to render anything within. It is important to note that React is only expecting one child within the render function. We are able to apply styles using two ways, the first is standard CSS, but with an added benefit of using Javascript objects to pass styles.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```javascript
+render() {
+	return (
+		<div>
+      <h1 class="foo">Example of using CSS to style</h1>
+      
+      <h1 style={styles.bar}>Example of using Javascript Objects to style</h1>
+    </div>
+    
+	);
+}
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
